@@ -29,7 +29,18 @@ module.exports = function makeExchange(currency) {
  		if(currenctCoins)
  			moneyExchange['D'] = currenctCoins;
 
-		
+		remainder = remainder % 10;
+ 		currenctCoins = Math.floor(remainder / 5);
+
+ 		if(currenctCoins)
+ 			moneyExchange['N'] = currenctCoins;
+
+ 		remainder = remainder % 5;
+		currenctCoins = Math.floor(remainder / 1);
+
+ 		if(currenctCoins)
+ 			moneyExchange['P'] = currenctCoins;
+    }
 
     return moneyExchange;
 }
