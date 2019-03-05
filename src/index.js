@@ -23,7 +23,13 @@ module.exports = function makeExchange(currency) {
  		if(currenctCoins)
  			moneyExchange['Q'] = currenctCoins;
 
- 		
+ 		remainder = remainder % 25;
+		currenctCoins = Math.floor(remainder / 10);
+
+ 		if(currenctCoins)
+ 			moneyExchange['D'] = currenctCoins;
+
+		
 
     return moneyExchange;
 }
