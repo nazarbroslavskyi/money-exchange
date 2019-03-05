@@ -11,7 +11,12 @@ module.exports = function makeExchange(currency) {
     	return {error: "You are rich, my friend! We don't have so much coins for exchange"}
     } else {
 
-    }
+		currenctCoins = Math.floor(currency / 50);
+		remainder = currenctCoins % 50;
+
+		if(currenctCoins) 
+			moneyExchange['H'] = currenctCoins;
+
 
     return moneyExchange;
 }
