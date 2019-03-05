@@ -17,6 +17,13 @@ module.exports = function makeExchange(currency) {
 		if(currenctCoins) 
 			moneyExchange['H'] = currenctCoins;
 
+ 		remainder = currency % 50;
+ 		currenctCoins = Math.floor(remainder / 25);
+
+ 		if(currenctCoins)
+ 			moneyExchange['Q'] = currenctCoins;
+
+ 		
 
     return moneyExchange;
 }
